@@ -45,7 +45,7 @@ export default function OptimisticPost({ post }: { post: Post }) {
     <div className="m-4">
       <Modal open={open} setOpen={setOpen}>
         <PostForm
-          post={post}
+          post={optimisticPost}
           closeModal={closeModal}
           openModal={openModal}
           addOptimistic={updatePost}
@@ -53,7 +53,7 @@ export default function OptimisticPost({ post }: { post: Post }) {
         />
       </Modal>
       <div className="flex justify-between items-end mb-4">
-        <h1 className="font-semibold text-2xl">{post.name}</h1>
+        <h1 className="font-semibold text-2xl">{optimisticPost.name}</h1>
         <Button className="" onClick={() => setOpen(true)}>
           Edit
         </Button>
